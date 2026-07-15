@@ -2,139 +2,84 @@ import { GithubIcon, GlobeIcon } from 'lucide-react';
 
 export const PROJECTS = [
   {
-    title: 'Imagined',
-    href: 'https://imagined.directory',
-    dates: 'June 2025 - Present',
-    active: true,
-    openSource: true,
-    description:
-      'Developing from scratch web app to Find and share the best prompts for AI image generation. Browse thousands of creative prompts from the community and create stunning visuals.',
-    technologies: [
-      'Next.js',
-      'TRPC',
-      'Cloudflare Workers',
-      'Typescript',
-      'React',
-      'React Query',
-      'Tailwind CSS',
-      'Shadcn UI',
-    ],
-    links: [
-      {
-        type: 'Website',
-        href: 'https://imagined.directory',
-        icon: <GlobeIcon className="size-3" />,
-      },
-      {
-        type: 'Repository',
-        href: 'https://github.com/iyansr/imagined',
-        icon: <GithubIcon className="size-3" />,
-      },
-    ],
-    image: '/images/imagined.jpg',
-    video: '',
-  },
-  {
-    title: 'Yapp',
-    href: 'https://yapp.ink',
-    dates: 'June 2025 - Present',
+    title: 'Payroll PT PSF',
+    href: 'https://payroll-app-ptpsf.hugoedmoundo.fun/',
+    dates: 'May 2026',
     active: true,
     openSource: false,
     description:
-      'Developing from scratch the all in one payment solutions for creators. Working on both user-facing platform and creator platform',
-    technologies: [
-      'Next.js',
-      'Typescript',
-      'React',
-      'React Query',
-      'Tailwind CSS',
-      'Shadcn UI',
-    ],
+      'Web-based Corporate Payroll Management System for PT Pangestu Suryaning Family. Automates employee data management, tracks attendance, and processes monthly salary distributions.',
+    technologies: ['Laravel 11', 'MySQL', 'Tailwind CSS'],
     links: [
       {
         type: 'Website',
-        href: 'https://yapp.ink',
-        icon: <GlobeIcon className="size-3" />,
-      },
-      {
-        type: 'Creator Platform',
-        href: 'https://creators.yapp.ink',
+    href: 'https://payroll-app-ptpsf.vercel.app/',
         icon: <GlobeIcon className="size-3" />,
       },
     ],
-    image: '/images/yapp.jpg',
+    image: 'https://kikobzzqdpfbmwppfiem.supabase.co/storage/v1/object/public/media/projects/1780036933079-Screenshot%202026-05-29%20134157.png',
     video: '',
   },
   {
-    title: 'Xellar Kit',
-    href: 'https://github.com/Xellar-Protocol/xellar-kit',
-    dates: 'March 2025 - Present',
-    active: true,
-    openSource: true,
-    description:
-      'Create and develop open-source Web3 connectors that enable seamless integration with Xellar Passport and various other wallets, including MetaMask (injector) and WalletConnect.',
-    technologies: [
-      'Vite',
-      'Typescript',
-      'React',
-      'React Query',
-      'Styled Components',
-    ],
-    links: [
-      {
-        type: 'Repository',
-        href: 'https://github.com/Xellar-Protocol/xellar-kit',
-        icon: <GithubIcon className="size-3" />,
-      },
-    ],
-    image:
-      'https://opengraph.githubassets.com/dd43e53a459f8eac8de90504814b495da41d99953a03ce5c446416d322583587/Xellar-Protocol/xellar-kit',
-    video: '',
-  },
-  {
-    title: 'Xellar Embedded Wallet SDK',
-    href: 'https://github.com/Xellar-Protocol/ew-sdk',
-    dates: 'March 2025 - Present',
-    active: true,
-    openSource: true,
-    description:
-      "Create and Develop SDK for Xellar's Embedded Wallets, allowing developers to easily integrate Xellar's Embedded Wallets into their applications.",
-    technologies: ['Typescript', 'Node.js'],
-    links: [
-      {
-        type: 'Repository',
-        href: 'https://github.com/Xellar-Protocol/ew-sdk',
-        icon: <GithubIcon className="size-3" />,
-      },
-    ],
-    image:
-      'https://opengraph.githubassets.com/b84bea45f02c09104cb15eecd8d1a415d64e05fc752f7b3bb0014416c5ada9e8/Xellar-Protocol/ew-sdk',
-    video: '',
-  },
-  {
-    title: 'Wepool',
-    href: 'https://wepool.id',
-    dates: 'Dec 2024 - March 2025',
+    title: 'Mini Chat',
+    href: 'https://hugochat.hugoedm.fun/',
+    dates: 'Apr 2026',
     active: true,
     openSource: false,
     description:
-      'Developing from scratch pool course booking application for students',
-    technologies: [
-      'Next.js',
-      'Typescript',
-      'React',
-      'React Query',
-      'Tailwind CSS',
-      'Shadcn UI',
-    ],
+      'Real-time chat application built with React and Supabase for testing and experimentation.',
+    technologies: ['Vite + React', 'Supabase'],
     links: [
       {
         type: 'Website',
-        href: 'https://wepool.id',
+        href: 'https://hugochat.hugoedm.fun/',
         icon: <GlobeIcon className="size-3" />,
       },
     ],
-    image: '/images/wepool.jpg',
+    image: 'https://res.cloudinary.com/dfwutfkbn/image/upload/v1777108920/01464086-f8c2-4f0d-bf3d-600a2fcea288.png',
+    video: '',
+  },
+  {
+    title: 'Queue Flow',
+    href: 'https://queue.hugoedmoundo.fun/',
+    dates: 'Apr 2026',
+    active: true,
+    openSource: true,
+    description:
+      'Task queue management application built with Supabase and React.',
+    technologies: ['Supabase', 'Vite + React'],
+    links: [
+      {
+        type: 'Website',
+        href: 'https://queue.hugoedmoundo.fun/',
+        icon: <GlobeIcon className="size-3" />,
+      },
+      {
+        type: 'Repository',
+        href: 'https://github.com/HugoEdmoundo/queue-.app',
+        icon: <GithubIcon className="size-3" />,
+      },
+    ],
+    image: 'https://kikobzzqdpfbmwppfiem.supabase.co/storage/v1/object/public/media/projects/1775642153396-Screenshot%202026-04-08%20165534.png',
+    video: '',
+  },
+  {
+    title: 'Blackjack Game',
+    href: 'https://blackjackgame-thisone.vercel.app',
+    dates: 'May 2026',
+    active: true,
+    openSource: false,
+    description:
+      'Blackjack card game web application with real-time gameplay.',
+    technologies: ['Next.js', 'Webpack', 'Deno', 'Redis', 'Upstash'],
+    links: [
+      {
+        type: 'Website',
+        href: 'https://blackjackgame-thisone.vercel.app',
+        icon: <GlobeIcon className="size-3" />,
+      },
+    ],
+    image: 'https://kikobzzqdpfbmwppfiem.supabase.co/storage/v1/object/public/media/projects/1779419651039-Screenshot%202026-05-22%20101342.png',
     video: '',
   },
 ];

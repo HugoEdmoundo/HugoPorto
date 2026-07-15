@@ -7,7 +7,7 @@ import { defineConfig } from 'vite';
 
 import { getPrerenderPages } from './src/lib/prerender-routes';
 
-const siteUrl = process.env.SITE_URL ?? 'https://iyansr.id';
+const siteUrl = process.env.SITE_URL ?? 'https://hugo-porto.vercel.app';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -28,7 +28,7 @@ export default defineConfig({
     react(),
     // Force Node.js server output for consistent production builds.
     nitro({
-      preset: 'node-server',
+      preset: 'vercel',
       routeRules: {
         '/assets/**': {
           headers: {

@@ -1,7 +1,6 @@
 import { createFileRoute, Link, useLoaderData } from '@tanstack/react-router';
-import { ChevronRightIcon } from 'lucide-react';
+import { ChevronRightIcon, GithubIcon, LinkedinIcon } from 'lucide-react';
 
-import { ContributionCard } from '@/components/contribution-card';
 import { ExperienceCard } from '@/components/experience-card';
 import { SmoothScrollProvider } from '@/components/lenis';
 import { BlurFade } from '@/components/magicui/blur-fade';
@@ -9,10 +8,12 @@ import BlurFadeText from '@/components/magicui/blur-fade-text';
 import { PostCard } from '@/components/post-card';
 import { ProjectCard } from '@/components/project-card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { EDUCATION } from '@/data/education';
 import { EXPERIENCE } from '@/data/experience';
 import { PROJECTS } from '@/data/project';
-import { useOpenSourceContributions } from '@/hooks/opensource-contrib';
+import { SKILLS } from '@/data/skills';
 import { getAllPosts } from '@/lib/post';
 
 export const Route = createFileRoute('/')({
@@ -28,8 +29,6 @@ const BLUR_FADE_DELAY = 0.04;
 function App() {
   const { posts } = useLoaderData({ from: '/' });
 
-  const { data: contributions } = useOpenSourceContributions();
-
   return (
     <SmoothScrollProvider>
       <div className="flex flex-col space-y-10 pb-14">
@@ -41,33 +40,33 @@ function App() {
                   delay={BLUR_FADE_DELAY}
                   className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none bg-gradient-to-b from-foreground to-muted-foreground bg-clip-text text-transparent"
                   yOffset={8}
-                  text={`Hi, I'm Iyan`}
+                  text={`Hi, I'm Ziyad`}
                 />
                 <BlurFadeText
                   className="text-sm font-medium"
                   delay={BLUR_FADE_DELAY}
-                  text="(I Putu Saputrayana)"
+                  text="(Muhammad Ziyad Hasan)"
                 />
                 <BlurFadeText
                   className="max-w-[580px] md:text-xl"
                   delay={BLUR_FADE_DELAY}
-                  text="✦ Experienced Software Engineer focused on TypeScript and React, with a growing passion for AI and Blockchain technologies."
+                  text="✦ Software Engineering student with a passion for building scalable full-stack applications."
                 />
               </div>
               <BlurFade delay={BLUR_FADE_DELAY}>
                 <Avatar className="size-28 border">
                   <AvatarImage
-                    alt="Iyan Saputra"
-                    src="https://avatars.githubusercontent.com/u/42711013?v=4"
+                    alt="Muhammad Ziyad Hasan"
+                    src="https://i.pinimg.com/1200x/e5/9b/9e/e59b9e057f0ec9bdc2a88d7ae97efa3e.jpg"
                   />
-                  <AvatarFallback>I</AvatarFallback>
+                  <AvatarFallback>Z</AvatarFallback>
                 </Avatar>
               </BlurFade>
             </div>
           </div>
 
           <a
-            href="https://cal.com/iyansr"
+            href="https://cal.com/hugoedm"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -82,12 +81,11 @@ function App() {
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
             <div className="prose max-w-full text-pretty text-sm text-muted-foreground dark:prose-invert">
-              Beginning my journey in 2020 as a Front-End Developer, I've grown
-              into a Software Engineer who designs and builds complete,
-              end-to-end applications. This background provides me with a
-              valuable perspective, allowing me to develop systems with a
-              capable back-end using Node.js and an intuitive, user-friendly
-              front-end using React.
+              Software Engineering student with a passion for building scalable
+              full-stack applications. I specialize in crafting robust backend
+              systems and modern, modular user interfaces. Always exploring new
+              tech, from cloud infrastructure to AI integration, to build
+              solutions that actually matter.
             </div>
           </BlurFade>
         </section>
@@ -165,69 +163,7 @@ function App() {
           </div>
         </BlurFade> */}
         </section>
-        <section id="open-source" className="mt-4">
-          <BlurFade
-            delay={BLUR_FADE_DELAY * 9 + EXPERIENCE.length * 0.05}
-            className="mb-4"
-          >
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  Open Source
-                </div>
-                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
-                  My Open Source Contribution
-                </h2>
-                <p className="text-muted-foreground text-sm md:text-base/relaxed">
-                  Check out my open source contribution on GitHub. This includes
-                  pull requests, issues, and other contributions.
-                </p>
-              </div>
-            </div>
-          </BlurFade>
-
-          <BlurFade delay={BLUR_FADE_DELAY * 10 + EXPERIENCE.length * 0.05}>
-            <div className="grid grid-cols-1 gap-4">
-              {contributions?.slice(0, 4)?.map((c) => (
-                <ContributionCard
-                  key={c.id}
-                  contribution={{
-                    created_at: c.created_at,
-                    number: c.number,
-                    title: c.title,
-                    state: c.state,
-                    html_url: c.html_url,
-                    labels: c.labels,
-                    id: c.id,
-                    repository: c.repository,
-                    repositoryUrl: c.repositoryUrl,
-                    type: c.type as 'pr' | 'issue',
-                    updated_at: c.updated_at,
-                    user: {
-                      avatar_url: c.user?.avatar_url ?? '',
-                      html_url: c.user?.html_url ?? '',
-                      login: c.user?.login ?? '',
-                    },
-                  }}
-                />
-              ))}
-            </div>
-          </BlurFade>
-
-          <BlurFade delay={BLUR_FADE_DELAY * 11}>
-            <div className="flex justify-center mt-4">
-              <Link to="/open-source">
-                <Button
-                  size="sm"
-                  variant="link"
-                  className="text-muted-foreground"
-                >
-                  View More <ChevronRightIcon />
-                </Button>
-              </Link>
-            </div>
-          </BlurFade>
-        </section>
+        {posts.length > 0 && (
         <section id="posts" className="mt-4">
           <BlurFade
             delay={BLUR_FADE_DELAY * 12 + EXPERIENCE.length * 0.05}
@@ -273,6 +209,120 @@ function App() {
                   View More <ChevronRightIcon />
                 </Button>
               </Link>
+            </div>
+          </BlurFade>
+        </section>
+        )}
+        <section id="skills" className="mt-4">
+          <BlurFade delay={BLUR_FADE_DELAY * 15} className="mb-4">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  Skills & Tools
+                </div>
+                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
+                  Tech Stack
+                </h2>
+                <p className="text-muted-foreground text-sm md:text-base/relaxed">
+                  Technologies and tools I work with.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 16}>
+            <div className="space-y-4">
+              {(['Languages', 'Frameworks', 'Databases', 'DevOps & Tools', 'Other'] as const).map(
+                (category) => {
+                  const categorySkills = SKILLS.filter((s) => s.category === category);
+                  if (categorySkills.length === 0) return null;
+                  return (
+                    <div key={category}>
+                      <h3 className="text-sm font-semibold text-muted-foreground mb-2">{category}</h3>
+                      <div className="flex flex-wrap gap-2">
+                        {categorySkills.map((skill) => (
+                          <Badge key={skill.name} variant="secondary">
+                            {skill.name}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+              )}
+            </div>
+          </BlurFade>
+        </section>
+        <section id="education" className="mt-4">
+          <BlurFade delay={BLUR_FADE_DELAY * 17} className="mb-4">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  Education
+                </div>
+                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
+                  Education
+                </h2>
+              </div>
+            </div>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 18}>
+            <div className="flex min-h-0 flex-col gap-y-4">
+              {EDUCATION.map((edu, id) => (
+                <BlurFade key={edu.institution} delay={BLUR_FADE_DELAY * 19 + id * 0.05}>
+                  <ExperienceCard
+                    logoUrl={edu.logo ?? ''}
+                    altText={edu.institution}
+                    title={edu.institution}
+                    subtitle={edu.program}
+                    href=""
+                    badges={[edu.type]}
+                    period={edu.year}
+                    description={edu.details || edu.location}
+                    location={edu.location}
+                  />
+                </BlurFade>
+              ))}
+            </div>
+          </BlurFade>
+        </section>
+        <section id="contact" className="mt-4">
+          <BlurFade delay={BLUR_FADE_DELAY * 20} className="mb-4">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  Contact
+                </div>
+                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
+                  Get in Touch
+                </h2>
+                <p className="text-muted-foreground text-sm md:text-base/relaxed">
+                  Feel free to reach out through any of these platforms.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 21}>
+            <div className="flex justify-center gap-4">
+              <a
+                href="https://github.com/HugoEdmoundo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" size="sm">
+                  <GithubIcon className="size-4 mr-2" />
+                  GitHub
+                </Button>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/muhammad-ziyad-hasan-95b1a1360/?locale=in"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" size="sm">
+                  <LinkedinIcon className="size-4 mr-2" />
+                  LinkedIn
+                </Button>
+              </a>
             </div>
           </BlurFade>
         </section>

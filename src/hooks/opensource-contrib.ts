@@ -2,14 +2,14 @@ import { useQuery } from "@tanstack/react-query";
 
 import type { GithubSearchSchema, IssueSearchResultItem } from "@/types/github";
 
-const query = "author:iyansr -org:Xellar-Protocol";
+const query = "author:HugoEdmoundo";
 
 const fetchPR = async () => {
   const searchParams = new URLSearchParams({
     sort: "created",
     order: "desc",
     per_page: "25",
-    q: `${query} type:pr -repo:iyansr/iyansr.id-reborn`,
+    q: `${query} type:pr`,
   });
   const response = await fetch(
     `https://api.github.com/search/issues?${searchParams.toString()}`,

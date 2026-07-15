@@ -29,15 +29,15 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
       {
         name: 'description',
         content:
-          'Iyan Saputra is a software engineer with a passion for building web and mobile applications.',
+          'Muhammad Ziyad Hasan is a software engineer with a passion for building scalable full-stack applications.',
       },
       {
-        title: 'Iyan Saputra - Software Engineer',
+        title: 'Muhammad Ziyad Hasan - Software Engineer',
       },
       {
         name: 'keywords',
         content:
-          'Iyan Saputra, software engineer, web developer, mobile developer, React Native, NextJS, Typescript, TailwindCSS, Firebase, full stack developer',
+          'Muhammad Ziyad Hasan, software engineer, web developer, full stack developer, React, NextJS, Typescript, Laravel, Python, PHP',
       },
       {
         name: 'theme-color',
@@ -48,19 +48,13 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
       { rel: 'stylesheet', href: appCss },
       {
         rel: 'icon',
-        href: 'https://avatars.githubusercontent.com/u/42711013?v=4',
-        type: 'image/png',
+        href: 'https://i.pinimg.com/1200x/e5/9b/9e/e59b9e057f0ec9bdc2a88d7ae97efa3e.jpg',
+        type: 'image/jpeg',
       },
       { rel: 'apple-touch-icon', href: '/logo192.png' },
       { rel: 'manifest', href: '/manifest.json' },
     ],
-    scripts: [
-      {
-        defer: true,
-        src: 'https://cloud.umami.is/script.js',
-        'data-website-id': '01fb7ee2-6dfb-4b53-a01c-9e9e5142252e',
-      },
-    ],
+    scripts: [],
   }),
   shellComponent: RootDocument,
   component: RootComponent,

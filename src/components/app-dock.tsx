@@ -2,8 +2,10 @@ import { Link } from '@tanstack/react-router';
 import {
   BookText,
   BriefcaseBusiness,
-  GitBranch,
+  Contact,
+  GraduationCap,
   Home,
+  Layers,
   Target,
 } from 'lucide-react';
 
@@ -27,14 +29,24 @@ const dockItems = [
     icon: Target,
   },
   {
-    title: 'Open Source',
-    href: '/#open-source',
-    icon: GitBranch,
+    title: 'Skills',
+    href: '/#skills',
+    icon: Layers,
+  },
+  {
+    title: 'Education',
+    href: '/#education',
+    icon: GraduationCap,
   },
   {
     title: 'Blog Post',
     href: '/#posts',
     icon: BookText,
+  },
+  {
+    title: 'Contact',
+    href: '/#contact',
+    icon: Contact,
   },
 ];
 
