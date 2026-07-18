@@ -24,6 +24,7 @@ export const EDUCATION: Education[] = [
     program: 'Teknik Komputer & Jaringan (TKJ)',
     year: 'Graduated',
     location: 'Bekasi',
+    details: 'Vocational program in Computer and Network Engineering covering network administration, system configuration, and IT infrastructure.',
   },
   {
     institution: 'Universitas Bina Nusantara',
@@ -31,6 +32,7 @@ export const EDUCATION: Education[] = [
     program: 'International Business Management (IBM) — Business Analytics',
     year: 'Sep 2026 — Expected 2030',
     location: 'Bekasi, Indonesia',
-    logo: 'https://kikobzzqdpfbmwppfiem.supabase.co/storage/v1/object/public/media/education/logo-1777091889756',
+    logo: 'https://binus.ac.id/wp-content/uploads/2022/08/logo-binus.svg',
+    details: 'Undergraduate program in International Business Management with Business Analytics concentration, focusing on data-driven decision making and global business strategy.',
   },
 ];
