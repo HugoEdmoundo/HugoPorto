@@ -23,7 +23,7 @@ export const PROJECTS = [
 
   {
     title: 'Queue Flow',
-    href: 'https://queue.hugoedmoundo.fun/',
+    href: 'https://queue-flow-rouge.vercel.app/',
     dates: 'Apr 2026',
     active: true,
     openSource: true,
@@ -33,7 +33,7 @@ export const PROJECTS = [
     links: [
       {
         type: 'Website',
-        href: 'https://queue.hugoedmoundo.fun/',
+        href: 'https://queue-flow-rouge.vercel.app/',
         icon: <GlobeIcon className="size-3" />,
       },
       {

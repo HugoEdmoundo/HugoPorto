@@ -36,7 +36,7 @@
       "title": "Queue Flow",
       "description": "Aplication for task",
       "tech_stack": ["Supabase", "Vite + React"],
-      "live_demo_url": "https://queue.hugoedmoundo.fun/",
+      "live_demo_url": "https://queue-flow-rouge.vercel.app/",
       "github_url": "https://github.com/HugoEdmoundo/queue-.app",
       "screenshot_url": "https://kikobzzqdpfbmwppfiem.supabase.co/storage/v1/object/public/media/projects/1775642153396-Screenshot%202026-04-08%20165534.png",
       "featured": false,
