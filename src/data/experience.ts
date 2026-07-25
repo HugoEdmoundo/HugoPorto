@@ -22,6 +22,17 @@ export const EXPERIENCE: Experience[] = [
     title: 'Backend Engineer',
   },
   {
+    company: 'PSF MEDIKA',
+    companyUrl: '#',
+    dates: 'Apr 2026 — Jun 2026',
+    description:
+      'Developed a Corporate Payroll Management System in a Moonrepo monorepo setup. Built RESTful APIs with Hono on the backend, created responsive dashboards with Vite + React and Tailwind CSS on the frontend, and managed relational data with MySQL. Automated employee data management, tracked attendance, and processed monthly salary distributions.',
+    location: 'Bekasi - Sentra Kota Jati Bening',
+    logo: 'https://res.cloudinary.com/dunynusuh/image/upload/v1784973186/WhatsApp_Image_2026-07-22_at_14.30.55_tfbi65.webp',
+    technologies: ['Hono', 'Vite React', 'TypeScript', 'Tailwind', 'MySQL', 'Moonrepo'],
+    title: 'FullStack Developer',
+  },
+  {
     company: 'PT Pangestu Suryaning Famili',
     companyUrl: 'https://pangestu-sf.com/',
     dates: 'Jan 2026 — Mar 2026',
