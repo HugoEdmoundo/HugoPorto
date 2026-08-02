@@ -26,13 +26,4 @@ export const EDUCATION: Education[] = [
     location: 'Bekasi',
     details: 'Vocational program in Computer and Network Engineering covering network administration, system configuration, and IT infrastructure.',
   },
-  {
-    institution: 'Universitas Bina Nusantara',
-    type: 'Formal',
-    program: 'International Business Management (IBM) — Business Analytics',
-    year: 'Sep 2026 — Expected 2030',
-    location: 'Bekasi, Indonesia',
-    logo: 'https://binus.ac.id/wp-content/uploads/2022/08/logo-binus.svg',
-    details: 'Undergraduate program in International Business Management with Business Analytics concentration, focusing on data-driven decision making and global business strategy.',
-  },
 ];
