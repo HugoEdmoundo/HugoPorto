@@ -22,6 +22,26 @@ export const PROJECTS = [
   },
 
   {
+    title: 'LuminaPrep',
+    href: 'https://github.com/iwansusanto/luminaprep',
+    dates: '2026',
+    active: true,
+    openSource: true,
+    description:
+      'AI-powered educational and preparation platform delivering personalized, adaptive learning experiences. Built as a monorepo with a React + Vite frontend and a FastAPI backend (MySQL, Redis, Celery, ChromaDB) orchestrated via Docker Compose.',
+    technologies: ['React 19', 'FastAPI', 'MySQL', 'Redis', 'Celery', 'ChromaDB', 'Docker'],
+    links: [
+      {
+        type: 'Repository',
+        href: 'https://github.com/iwansusanto/luminaprep',
+        icon: <GithubIcon className="size-3" />,
+      },
+    ],
+    image: '',
+    video: '',
+  },
+
+  {
     title: 'Queue Flow',
     href: 'https://queue-flow-rouge.vercel.app/',
     dates: 'Apr 2026',
